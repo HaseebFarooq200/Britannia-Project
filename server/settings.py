@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     # ? Custom Apps
-    'ping'
+    'ping',
+    'system_user'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
 ROOT_URLCONF = 'server.urls'
+
+##******************************************##
+# ?           TEST FIXTURES CONFIG
+##******************************************##
+FIXTURE_DIRS = [BASE_DIR / "system_user" / "seeds"]
 
 TEMPLATES = [
     {

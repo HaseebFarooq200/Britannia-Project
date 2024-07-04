@@ -1,0 +1,15 @@
+[
+    {
+        "model": "system_user.CustomUser",
+        "pk": 1,
+        "fields": {
+            "Email": "abc@gmail.com",
+            "UserName": "ABDF",
+            "PhoneNumber": "03448204629",
+            "password": "tooshoert",
+            "IsAdmin": false,
+            "CreatedAt": "1995-07-27",
+            "UpdatedAt": "1995-07-27"
+        }
+    }
+]
